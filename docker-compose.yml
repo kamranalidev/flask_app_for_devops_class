@@ -6,10 +6,10 @@ services:
     ports:
       - "8000:8000"
     environment:
-      MYSQL_HOST: db
-      MYSQL_USER: root
-      MYSQL_PASSWORD: 1234
-      MYSQL_DB: appdb
+      POSTGRES_HOST: db
+      POSTGRES_USER: appuser
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: appdb
       REDIS_HOST: redis
     depends_on:
       - db

@@ -7,6 +7,7 @@ from FlaskWebProject1 import config
 
 redis_client = redis.StrictRedis(host=config.REDIS_HOST, port=config.REDIS_PORT, decode_responses=True)
 
+
 @app.route('/')
 @app.route('/home')
 def home():
@@ -15,6 +16,7 @@ def home():
         title='Home Page',
         year=datetime.now().year,
     )
+
 
 @app.route('/contact')
 def contact():
@@ -25,6 +27,7 @@ def contact():
         message='Your contact page.'
     )
 
+
 @app.route('/about')
 def about():
     return render_template(
@@ -33,6 +36,7 @@ def about():
         year=datetime.now().year,
         message='Your application description page.'
     )
+
 
 @app.route('/db-test')
 def db_test():
