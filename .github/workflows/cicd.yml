@@ -1,4 +1,4 @@
-name: devops app
+name: muhabbat ali
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
 
       - name: List Files
         run: |
-          echo "Terry is teaching"
+          curl google.com
 
       - name: Install Dependencies
         run: |
